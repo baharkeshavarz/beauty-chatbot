@@ -7,7 +7,6 @@ import { SxProps } from '@mui/system';
 import { DEFAULT_PATH } from 'src/configs/config';
 import LogoIcon from './LogoIcon';
 import Logo from './LogoMain';
-import { useSelector } from 'react-redux';
 
 interface Props {
   reverse?: boolean;
