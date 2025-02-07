@@ -1,5 +1,5 @@
 const common = {
-  title: 'پنل موتومچ',
+  title: 'Zhoost',
   breadcrumbs: {
     home: 'خانه',
   },
@@ -14,27 +14,20 @@ const common = {
     close: 'بستن',
     logout: 'خروج',
     login: 'ورود',
+    signup: 'ثبت نام',
     showDetails: 'نمایش جزئیات',
     delete: 'حذف',
     assign: 'اختصاص دادن',
     reset: 'بازنشانی',
     reject: 'رد کردن',
     approve: 'تایید',
-    approveLabel: 'تعیین وضعیت',
-    callAI: 'AI مجدد',
     cancel: 'لغو',
-    batchApprove: 'تایید گروهی',
-    submitOrder: 'ثبت سفارش',
-    approveStatus: 'در حال تایید وضعیت',
-    approveAndSubmit: 'تایید و ثبت سفارش',
     showUserDetails: 'اطلاعات کاربر',
-    orderDetails: 'اطلاعات سفارش',
     comments: 'توضیحات',
     refresh: 'بروزرسانی',
     changePassword: 'تغییر رمز عبور',
     account: 'پروفایل من',
     copy: 'کپی',
-    showRequests: 'نمایش درخواست ها',
   },
   fields: {
     isRequired: 'اجباری است',
@@ -78,7 +71,6 @@ const common = {
     userNationality: 'ملیت کاربر',
     userPhoneNumber: 'شماره تلفن کاربر',
     userEmail: 'ایمیل کاربر',
-    assignedTo: 'اختصاص داده شده به',
     id: 'شناسه',
     title: 'عنوان',
     status: 'وضعیت',
@@ -89,92 +81,10 @@ const common = {
     firstName: 'نام',
     lastName: 'نام خانوادگی',
   },
-
-  contractStatus: {
-    New: 'جدید',
-    Approved: 'تایید شده',
-    Rejected: 'رد شده',
-    Expired: 'منقضی شده',
-    Blocked: 'مسدود شده',
-  },
-  kycStatus: {
-    PersonalInfoConfirmed: 'اطلاعات شخصی تایید شد',
-    CompanyInfoConfirmed: 'اطلاعات شرکت تایید شد',
-    BankAccountInfoConfirmed: 'اطلاعات حساب بانکی تایید شد',
-    ContactInfoConfirmed: 'اطلاعات تماس تایید شد',
-    NationalCardConfirmed: 'کارت ملی تایید شد',
-    IdentityCardConfirmed: 'کارت شناسایی تایید شد',
-    VatDocumentConfirmed: 'مدرک مالیات بر ارزش افزوده تایید شد',
-    NewsPaperDocumentConfirmed: 'روزنامه رسمی تایید شد',
-  },
-  verifyStatus: {
-    UnVerify: 'تایید نشده',
-    Pending: 'در انتظار',
-    Failed: 'ناموفق',
-    Verified: 'تایید شده',
-  },
-  registerMedium: {
-    Wati: 'واتی',
-    Manual: 'دستی',
-    Panel: 'پنل',
-    Respond: 'پاسخ',
-  },
-
-  userStatus: {
-    Registering: 'در حال ثبت نام',
-    PendingConfirmation: 'در انتظار تایید',
-    InReview: 'در حال بررسی',
-    KycError: 'خطای احراز هویت',
-    Confirmed: 'تایید شده',
-    Rejected: 'رد شده',
-    Blocked: 'مسدود شده',
-  },
-
-  step: {
-    Start: 'شروع',
-    GetName: 'دریافت نام',
-    GetCompanyName: 'دریافت نام شرکت',
-    GetNumber: 'دریافت شماره',
-    GetLocation: 'دریافت مکان',
-    GetBrands: 'دریافت برندها',
-    GetCategories: 'دریافت دسته‌بندی‌ها',
-    FinalRegistering: 'ثبت نهایی',
-  },
-
   gender: {
     male: 'مرد',
     female: 'زن',
     unknown: 'نامشخص',
-  },
-
-  userType: {
-    Customer: 'مشتری',
-    Supplier: 'تامین کننده',
-    Admin: 'مدیر',
-    SuperAdmin: 'مدیر ارشد',
-    Support: 'پشتیبانی',
-    Service: 'خدمات',
-    Logistic: 'لاجستیک',
-  },
-
-  booleans: {
-    true: 'بله',
-    false: 'خیر',
-  },
-
-  uploadFile: {
-    message:
-      'فایل‌ها را اینجا بکشید و رها کنید، یا کلیک کنید تا فایل‌ها را انتخاب کنید',
-    buttonTitle: 'انتخاب فایل‌ها',
-    errorWrongType: 'نوع فایل نامعتبر است',
-    errorMaxSize: 'حجم فایل بسیار زیاد است. حداکثر حجم فایل: ',
-  },
-
-  currencyType: {
-    rial: 'ریال',
-    toman: 'تومان',
-    dollar: 'دلار',
-    euro: 'یورو',
   },
 };
 

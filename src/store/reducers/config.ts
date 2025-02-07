@@ -4,10 +4,10 @@ import { DefaultConfigProps } from 'src/types/config';
 
 const initialState: DefaultConfigProps = {
   i18n: defaultLocale,
-  miniDrawer: false,
+  miniDrawer: true,
   container: false,
-  mode: 'light',
-  presetColor: 'theme7',
+  mode: 'dark',
+  presetColor: 'theme9',
 };
 
 const config = createSlice({

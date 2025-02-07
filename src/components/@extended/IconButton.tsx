@@ -7,23 +7,18 @@ import {
   Ref,
 } from 'react';
 
-// material-ui
 import MuiIconButton from '@mui/material/IconButton';
 import { alpha, styled, useTheme } from '@mui/material/styles';
 import { IconButtonProps } from '@mui/material';
 
-// project imports
 import getColors from 'src/utils/getColors';
 import getShadow from 'src/utils/getShadow';
 
-// types
 import {
   ButtonVariantProps,
   ExtendedStyleProps,
   IconButtonShapeProps,
 } from 'src/types/extended';
-
-// ==============================|| ICON BUTTON - COLOR STYLE ||============================== //
 
 interface IconButtonStyleProps extends ExtendedStyleProps {
   variant?: ButtonVariantProps;

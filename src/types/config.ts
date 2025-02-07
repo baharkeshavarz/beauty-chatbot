@@ -11,7 +11,8 @@ export type PresetColor =
   | 'theme5'
   | 'theme6'
   | 'theme7'
-  | 'theme8';
+  | 'theme8'
+  | 'theme9';
 
 export type DefaultConfigProps = {
   i18n: LanguagesType;

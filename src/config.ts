@@ -14,35 +14,35 @@ export const FIREBASE_API = {
   storageBucket: 'mantis-4040b.appspot.com',
   messagingSenderId: '1073498457348',
   appId: '1:1073498457348:web:268210e18c8f2cab30fc51',
-  measurementId: 'G-7SP8EXFS48'
+  measurementId: 'G-7SP8EXFS48',
 };
 
 export const AWS_API = {
   poolId: 'us-east-1_AOfOTXLvD',
-  appClientId: '3eau2osduslvb7vks3vsh9t7b0'
+  appClientId: '3eau2osduslvb7vks3vsh9t7b0',
 };
 
 export const JWT_API = {
   secret: 'SECRET-KEY',
-  timeout: '1 days'
+  timeout: '1 days',
 };
 
 export const AUTH0_API = {
   client_id: '7T4IlWis4DKHSbG8JAye4Ipk0rvXkH9V',
-  domain: 'dev-w0-vxep3.us.auth0.com'
+  domain: 'dev-w0-vxep3.us.auth0.com',
 };
 
 // ==============================|| THEME CONFIG  ||============================== //
 
 const config: DefaultConfigProps = {
-  defaultPath: '/dashboard/analytics',
+  defaultPath: '/',
   fontFamily: `'Public Sans', sans-serif`,
   i18n: 'en',
-  miniDrawer: false,
-  container: true,
+  miniDrawer: true,
+  container: false,
   mode: 'light',
   presetColor: 'default',
-  themeDirection: 'ltr'
+  themeDirection: 'ltr',
 };
 
 export default config;

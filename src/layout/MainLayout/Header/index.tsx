@@ -1,13 +1,23 @@
 import { ReactNode, useMemo } from 'react';
 
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, useMediaQuery, AppBarProps } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  useMediaQuery,
+  AppBarProps,
+  Typography,
+  Box,
+  Stack,
+} from '@mui/material';
 
 import AppBarStyled from './AppBarStyled';
 import HeaderContent from './HeaderContent';
 import IconButton from 'src/components/@extended/IconButton';
 
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import UserAuth from '../UserAuth';
+import theme from 'src/themes/theme';
 
 interface Props {
   open: boolean;
@@ -27,23 +37,33 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
     theme.palette.mode === 'dark' ? 'background.default' : 'grey.100';
 
   const mainHeader: ReactNode = (
-    <Toolbar>
-      <IconButton
-        aria-label="open drawer"
-        onClick={handleDrawerToggle}
-        edge="start"
-        color="secondary"
-        variant="light"
-        sx={{
-          color: 'text.primary',
-          bgcolor: open ? iconBackColorOpen : iconBackColor,
-          ml: { xs: 0, lg: -2 },
-        }}
-      >
-        {!open ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-      </IconButton>
+    <Box
+      px={2}
+      mx={1}
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+    >
+      <Stack direction="row" alignItems="flex-start">
+        <IconButton
+          aria-label="open drawer"
+          onClick={handleDrawerToggle}
+          edge="start"
+          color="secondary"
+          variant="light"
+          sx={{
+            color: 'text.primary',
+            bgcolor: open ? iconBackColorOpen : iconBackColor,
+            ml: { xs: 0, lg: -2 },
+          }}
+        >
+          {!open ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        </IconButton>
+        <UserAuth />
+      </Stack>
+
       {headerContent}
-    </Toolbar>
+    </Box>
   );
 
   // app-bar params
