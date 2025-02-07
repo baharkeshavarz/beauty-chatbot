@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import { Box, Container, Toolbar } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
 import Drawer from './Drawer';
 import Header from './Header';
@@ -22,14 +22,12 @@ const MainLayout = () => {
   };
 
   const menuItems = useServerMenu();
-  const navigation = { items: [menuItems] };
-
   return (
     <Box sx={{ display: 'flex', width: '100%' }}>
+      <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <Drawer open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <Box component="main" sx={{ width: 'calc(100% - 260px)', flexGrow: 1 }}>
-        {/* <Toolbar /> */}
-        {container && (
+        {/* {container && (
           <Container
             maxWidth="xl"
             sx={{
@@ -39,45 +37,25 @@ const MainLayout = () => {
               flexDirection: 'column',
             }}
           >
-            {/* <Breadcrumbs
-              navigation={navigation}
-              title
-              titleBottom
-              card={false}
-              divider={false}
-            /> */}
-            <Outlet />
-            {/* <Footer /> */}
+           <Outlet />
           </Container>
-        )}
+        )} */}
 
         {!container && (
-          <>
-            <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
-            <Box
-              sx={{
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                backgroundImage: `url(${cover})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center center',
-                opacity: 0.7,
-                backgroundSize: 'cover',
-                height: '100vh',
-              }}
-            >
-              {/* <Breadcrumbs
-              navigation={navigation}
-              title
-              titleBottom
-              card={false}
-              divider={false}
-            /> */}
-              <Outlet />
-              {/* <Footer /> */}
-            </Box>
-          </>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              backgroundImage: `url(${cover})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center center',
+              opacity: 0.7,
+              backgroundSize: 'cover',
+              height: '100vh',
+            }}
+          >
+            <Outlet />
+          </Box>
         )}
       </Box>
     </Box>

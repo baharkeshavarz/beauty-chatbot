@@ -4,7 +4,7 @@ import { DefaultConfigProps } from 'src/types/config';
 
 const initialState: DefaultConfigProps = {
   i18n: defaultLocale,
-  miniDrawer: true,
+  miniDrawer: false,
   container: false,
   mode: 'dark',
   presetColor: 'theme9',

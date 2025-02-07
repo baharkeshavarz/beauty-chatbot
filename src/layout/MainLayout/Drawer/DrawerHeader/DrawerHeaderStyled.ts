@@ -12,7 +12,7 @@ const DrawerHeaderStyled = styled(Box, {
   ...theme.mixins.toolbar,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: open ? 'space-between' : 'center',
+  justifyContent: open ? 'space-around' : 'center',
   paddingLeft: theme.spacing(open ? 3 : 0),
 }));
 

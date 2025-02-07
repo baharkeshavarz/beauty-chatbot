@@ -18,8 +18,6 @@ interface Props {
 
 const LogoSection = ({ reverse, isIcon, sx, to }: Props) => {
   let defaultPath = DEFAULT_PATH;
-  const privileges = useSelector((state: any) => state.privileges?.value);
-
   return (
     <ButtonBase
       disableRipple

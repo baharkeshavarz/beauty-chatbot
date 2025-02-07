@@ -15,12 +15,13 @@ const openedMixin = (theme: Theme): CSSObject => ({
 });
 
 const closedMixin = (theme: Theme): CSSObject => ({
+  width: 0,
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
-  width: theme.spacing(7.5),
+  // width: theme.spacing(7.5), //TODO: show icons
   borderRight: 'none',
   boxShadow: theme.customShadows.z1,
 });

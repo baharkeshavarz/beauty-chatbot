@@ -27,8 +27,6 @@ interface Props {
 const Header = ({ open, handleDrawerToggle }: Props) => {
   const theme = useTheme();
   const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
-
-  // header content
   const headerContent = useMemo(() => <HeaderContent />, []);
 
   const iconBackColorOpen =
@@ -38,7 +36,7 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
 
   const mainHeader: ReactNode = (
     <Box
-      px={2}
+      p={2}
       mx={1}
       display="flex"
       justifyContent="space-between"
