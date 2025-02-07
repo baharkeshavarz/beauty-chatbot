@@ -39,7 +39,7 @@ const BarChart: React.FC<BarChartProps> = ({
   };
 
   const fontSetting = {
-    family: theme.direction === 'rtl' ? 'yekan-bakh' : undefined,
+    family: theme.direction === 'rtl' ? 'iransans' : undefined,
   };
 
   const options = {

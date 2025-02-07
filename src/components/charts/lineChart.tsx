@@ -38,7 +38,7 @@ const LineChart: React.FC<LineChartType> = ({
   const theme = useTheme();
 
   const fontSetting = {
-    family: theme.direction === 'rtl' ? 'yekan-bakh' : undefined,
+    family: theme.direction === 'rtl' ? 'iransans' : undefined,
   };
 
   const lineData = {

@@ -5,8 +5,8 @@ export default function MuiCssBaseLine() {
     MuiCssBaseline: {
       styleOverrides: `
     @font-face {
-      font-family: 'yekan-bakh';
-      src: url('/assets/fonts/yekan-bakh/YekanBakh-VF.ttf') format('truetype');
+      font-family: 'iransans';
+      src: url('/assets/fonts/iransans/IRANSansWeb.woff') format('truetype');
       font-weight: 100 900;
       font-display: swap;
     }

@@ -41,7 +41,7 @@ export const languageMapper: Record<
   },
   'fa-IR': {
     direction: 'rtl',
-    fontFamily: 'yekan-bakh, manrope',
+    fontFamily: 'iransans, manrope',
   },
 };
 
