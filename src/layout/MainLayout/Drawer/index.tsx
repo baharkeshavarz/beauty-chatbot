@@ -1,18 +1,13 @@
 import { useEffect, useMemo } from 'react';
-
-// material-ui
 import { useTheme } from '@mui/material/styles';
 import { Box, Drawer, useMediaQuery } from '@mui/material';
 
-// project import
 import DrawerHeader from './DrawerHeader';
 import DrawerContent from './DrawerContent';
 import MiniDrawerStyled from './MiniDrawerStyled';
 import { drawerWidth } from 'src/configs/config';
 import { useDispatch } from 'src/store';
 import { fetchPrivileges } from 'src/store/reducers/privileges';
-
-// ==============================|| MAIN LAYOUT - DRAWER ||============================== //
 
 interface Props {
   open: boolean;
@@ -30,7 +25,10 @@ const MainDrawer = ({ open, handleDrawerToggle, window }: Props) => {
 
   // header content
   const drawerContent = useMemo(() => <DrawerContent />, []);
-  const drawerHeader = useMemo(() => <DrawerHeader open={open} />, [open]);
+  const drawerHeader = useMemo(
+    () => <DrawerHeader open={open} handleDrawerToggle={handleDrawerToggle} />,
+    [open],
+  );
 
   const dispatch = useDispatch();
 

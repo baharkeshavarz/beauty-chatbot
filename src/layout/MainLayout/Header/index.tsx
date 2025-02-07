@@ -1,18 +1,13 @@
 import { ReactNode, useMemo } from 'react';
 
-// material-ui
 import { useTheme } from '@mui/material/styles';
 import { AppBar, Toolbar, useMediaQuery, AppBarProps } from '@mui/material';
 
-// project import
 import AppBarStyled from './AppBarStyled';
 import HeaderContent from './HeaderContent';
 import IconButton from 'src/components/@extended/IconButton';
 
-// assets
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-
-// ==============================|| MAIN LAYOUT - HEADER ||============================== //
 
 interface Props {
   open: boolean;
@@ -31,7 +26,6 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
   const iconBackColor =
     theme.palette.mode === 'dark' ? 'background.default' : 'grey.100';
 
-  // common header
   const mainHeader: ReactNode = (
     <Toolbar>
       <IconButton
@@ -59,7 +53,6 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
     elevation: 0,
     sx: {
       borderBottom: `1px solid ${theme.palette.divider}`,
-      // boxShadow: theme.customShadows.z1
     },
   };
 
