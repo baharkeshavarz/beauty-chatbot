@@ -63,6 +63,7 @@ const MainLayout = () => {
               flexDirection: 'column',
               backgroundImage: `url(${cover})`,
               backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center center',
               opacity: 0.7,
               backgroundSize: 'cover',
               height: '100vh',

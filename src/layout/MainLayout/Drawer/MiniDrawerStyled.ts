@@ -1,8 +1,6 @@
-// material-ui
 import { styled, Theme, CSSObject } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 
-// project import
 import { drawerWidth } from 'src/configs/config';
 
 const openedMixin = (theme: Theme): CSSObject => ({
