@@ -1,0 +1,3 @@
+type ImageModule = {
+  default: string;
+};
