@@ -1,11 +1,12 @@
-import { Home } from 'iconsax-react';
 import { lazy } from 'react';
 import Loadable from 'src/components/Loadable';
 import MainLayout from 'src/layout/MainLayout';
 import AuthGuard from 'src/utils/route-guard/AuthGuard';
 import GuestGuard from 'src/utils/route-guard/GuestGuard';
 
+const Home = Loadable(lazy(() => import('src/pages/Home/Home')));
 const Chats = Loadable(lazy(() => import('src/pages/Chats/Chats')));
+const NotFound = Loadable(lazy(() => import('src/pages/maintenance/404')));
 
 const MainRoutes = {
   path: '/',
@@ -28,6 +29,10 @@ const MainRoutes = {
             {
               path: 'chats',
               element: <Chats />,
+            },
+            {
+              path: '*',
+              element: <NotFound />,
             },
           ],
         },
