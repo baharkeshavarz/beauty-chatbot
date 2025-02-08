@@ -58,7 +58,8 @@ const MobileSection = () => {
   return (
     <>
       <Box sx={{ flexShrink: 0, ml: 0.75 }}>
-        <IconButton
+        <Localization />
+        {/* <IconButton
           sx={{
             color: 'text.primary',
             bgcolor: open ? iconBackColorOpen : iconBackColor,
@@ -71,9 +72,9 @@ const MobileSection = () => {
           variant="light"
         >
           <MoreOutlined />
-        </IconButton>
+        </IconButton> */}
       </Box>
-      <Popper
+      {/* <Popper
         placement="bottom-end"
         open={open}
         anchorEl={anchorRef.current}
@@ -102,14 +103,14 @@ const MobileSection = () => {
                   <Toolbar>
                     <Search />
                     <Localization />
-                    {/* <Profile /> */}
+                    <Profile />
                   </Toolbar>
                 </AppBar>
               </ClickAwayListener>
             </Paper>
           </Transitions>
         )}
-      </Popper>
+      </Popper> */}
     </>
   );
 };
