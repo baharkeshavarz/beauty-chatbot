@@ -7,7 +7,6 @@ import {
   SOCIAL_WHATSAPP_IMAGE,
   SOCIAL_WHATSAPP_LINK,
 } from 'src/configs/config';
-import { useAppContext } from 'src/hooks/useAppContext';
 
 const ImageWrapper = styled(Box)({
   cursor: 'pointer',
@@ -36,16 +35,10 @@ const socialMediaItems = [
 ];
 
 const SocialMedia = () => {
-  const { isMobile } = useAppContext();
   const imgBoxSize = { xs: '90px', sm: '90px', md: '110px' };
 
   return (
-    <Stack
-      pt={isMobile ? 35 : 50}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Stack display="flex" justifyContent="center" alignItems="center" pt={5}>
       <Grid container spacing={2} maxWidth="sm" mx="auto">
         {socialMediaItems.map(social => (
           <Grid item xs={4} sm={4} md={4} key={social.title}>

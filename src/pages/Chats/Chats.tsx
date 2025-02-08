@@ -1,13 +1,12 @@
 import Wrapper from 'src/components/Wrapper/Wrapper';
-import ChatHeader from './components/ChatHeader';
-import ChatBox from './components/ChatBox';
 import SocialMedia from './components/SocialMedia';
+import ChatHeader from './components/ChatHeader';
 
 const Chats = () => {
   return (
     <Wrapper>
-      {/* <ChatHeader />
-      <ChatBox /> */}
+      <ChatHeader />
+      {/* <ChatBox /> */}
       <SocialMedia />
     </Wrapper>
   );
