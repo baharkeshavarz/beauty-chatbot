@@ -1,7 +1,23 @@
 import { Box, useTheme } from '@mui/material';
-import { DEFAULT_LOGO_DARK, DEFAULT_LOGO_LIGHT } from 'src/configs/config';
 
-const LogoMain = ({ reverse, ...others }: { reverse?: boolean }) => {
+import {
+  DEFAULT_LOGO_DARK,
+  DEFAULT_LOGO_LIGHT,
+  DEFAULT_PROJECT_NAME,
+} from 'src/configs/config';
+
+interface LogoMainProps {
+  reverse?: boolean;
+  logoSx: any;
+  logoSource?: any;
+}
+
+const LogoMain = ({
+  reverse,
+  logoSx,
+  logoSource,
+  ...others
+}: LogoMainProps) => {
   const theme = useTheme();
   const mode = theme.palette.mode;
 
@@ -10,11 +26,13 @@ const LogoMain = ({ reverse, ...others }: { reverse?: boolean }) => {
     dark: DEFAULT_LOGO_DARK,
   };
 
+  console.log(logoSx);
+
   return (
     <Box
       sx={{
         pt: 5,
-        pb: 3,
+        pb: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -24,9 +42,10 @@ const LogoMain = ({ reverse, ...others }: { reverse?: boolean }) => {
         style={{
           height: 56,
           borderRadius: '50%',
+          ...logoSx,
         }}
-        src={sources[mode]}
-        alt="Zhoost"
+        src={logoSource ? logoSource : sources[mode]}
+        alt={DEFAULT_PROJECT_NAME}
       />
     </Box>
   );

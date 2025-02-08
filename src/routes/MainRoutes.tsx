@@ -24,7 +24,7 @@ const MainRoutes = {
           children: [
             {
               path: '',
-              element: <Home />,
+              element: <Chats />,
             },
             {
               path: 'chats',

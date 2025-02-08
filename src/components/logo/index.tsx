@@ -1,6 +1,5 @@
 import { To } from 'history';
 import { Link } from 'react-router-dom';
-
 import { ButtonBase } from '@mui/material';
 import { SxProps } from '@mui/system';
 
@@ -13,9 +12,18 @@ interface Props {
   isIcon?: boolean;
   sx?: SxProps;
   to?: To;
+  logoSx?: SxProps;
+  logoSource?: any;
 }
 
-const LogoSection = ({ reverse, isIcon, sx, to }: Props) => {
+const LogoSection = ({
+  reverse,
+  isIcon,
+  sx,
+  to,
+  logoSx,
+  logoSource,
+}: Props) => {
   let defaultPath = DEFAULT_PATH;
   return (
     <ButtonBase
@@ -24,7 +32,11 @@ const LogoSection = ({ reverse, isIcon, sx, to }: Props) => {
       to={!to ? defaultPath : to}
       sx={sx}
     >
-      {isIcon ? <LogoIcon /> : <Logo reverse={reverse} />}
+      {isIcon ? (
+        <LogoIcon />
+      ) : (
+        <Logo reverse={reverse} logoSx={logoSx} logoSource={logoSource} />
+      )}
     </ButtonBase>
   );
 };

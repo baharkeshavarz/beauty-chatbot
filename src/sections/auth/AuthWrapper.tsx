@@ -7,6 +7,7 @@ import LanguageSelector from 'src/components/LanguageSelector/LanguageSelector';
 import AuthFooter from 'src/components/cards/AuthFooter';
 import Logo from 'src/components/logo';
 import AuthCard from './AuthCard';
+import { DEFAULT_PROJECT_NAME } from 'src/configs/config';
 interface Props {
   children?: ReactNode;
 }
@@ -49,7 +50,7 @@ const AuthWrapper = ({ children }: Props) => {
                 </Box>
                 <Stack spacing={1}>
                   <Typography variant="h5" textAlign="center">
-                    Zhoost
+                    {DEFAULT_PROJECT_NAME}
                   </Typography>
                 </Stack>
                 {children}

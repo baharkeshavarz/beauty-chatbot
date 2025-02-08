@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { DEFAULT_PROJECT_NAME } from 'src/configs/config';
 import { LanguagesType } from 'src/configs/languages';
 import i18nInstance from 'src/i18n/i18n';
 import { useSelector } from 'src/store';
 import { arLocale, faLocale } from 'src/utils/yup';
 import * as yup from 'yup';
-import { ar, en } from 'yup-locales';
+import { en } from 'yup-locales';
 
 const localeMapper: Record<LanguagesType, yup.LocaleObject> = {
   'en-US': en,
@@ -24,7 +25,7 @@ const LanguageProvider = ({ children }) => {
   return (
     <>
       <Helmet>
-        <title>Zhoost</title>
+        <title>{DEFAULT_PROJECT_NAME}</title>
       </Helmet>
       {children}
     </>
