@@ -8,8 +8,7 @@ import Header from './Header';
 import { useSelector } from 'src/store';
 import { openDrawer } from 'src/store/reducers/menu';
 import useServerMenu from './Drawer/hooks/useMenuItem';
-
-const cover = '/assets/images/template-background.png';
+import { DEFAULT_BACKGROUND_IMAGE } from 'src/configs/config';
 
 const MainLayout = () => {
   const dispatch = useDispatch();
@@ -46,7 +45,7 @@ const MainLayout = () => {
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              backgroundImage: `url(${cover})`,
+              backgroundImage: `url(${DEFAULT_BACKGROUND_IMAGE})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center center',
               opacity: 0.7,
