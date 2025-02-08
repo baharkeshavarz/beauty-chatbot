@@ -5,7 +5,6 @@ const ChatInput = () => {
   const { t } = useTranslation();
   return (
     <TextField
-      fullWidth
       sx={{
         bgcolor: 'common.white',
         opacity: 1,

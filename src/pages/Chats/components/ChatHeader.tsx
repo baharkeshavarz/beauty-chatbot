@@ -3,7 +3,6 @@ import { Stack } from '@mui/system';
 import Logo from 'src/components/logo';
 import { DEFAULT_LOGO_LIGHT } from 'src/configs/config';
 import { useAppContext } from 'src/hooks/useAppContext';
-import ChatBox from './ChatBox';
 
 const ChatHeader = () => {
   const { isMobile } = useAppContext();
@@ -30,7 +29,6 @@ const ChatHeader = () => {
             S O L U T I O N
           </Typography>
         </Stack>
-        <ChatBox />
       </Stack>
     </>
   );

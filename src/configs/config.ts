@@ -6,3 +6,12 @@ export const DEFAULT_LOGO_LIGHT = '/assets/images/logo-black.webp';
 export const DEFAULT_PROJECT_NAME = 'Zhoost';
 export const DEFAULT_BACKGROUND_IMAGE =
   '/assets/images/template-background.png';
+
+export const SOCIAL_TELEGRAM_IMAGE = '/assets/images/socialmedia/telegram.png';
+export const SOCIAL_INSTAGRAM_IMAGE =
+  '/assets/images/socialmedia/instagram.png';
+export const SOCIAL_WHATSAPP_IMAGE = '/assets/images/socialmedia/whatsapp.png';
+
+export const SOCIAL_TELEGRAM_LINK = '';
+export const SOCIAL_INSTAGRAM_LINK = '';
+export const SOCIAL_WHATSAPP_LINK = '';
