@@ -102,7 +102,7 @@ const MobileSection = () => {
                   <Toolbar>
                     <Search />
                     <Localization />
-                    <Profile />
+                    {/* <Profile /> */}
                   </Toolbar>
                 </AppBar>
               </ClickAwayListener>

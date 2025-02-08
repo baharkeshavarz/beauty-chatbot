@@ -12,7 +12,7 @@ const ChatHeader = () => {
     <>
       <Stack display="flex" justifyContent="center" alignItems="center" pt={15}>
         <Logo
-          logoSx={{ width: 180, height: 85 }}
+          logoSx={{ width: 180, height: 80 }}
           logoSource={DEFAULT_LOGO_LIGHT}
         />
         <Stack direction="row" spacing={2.2}>

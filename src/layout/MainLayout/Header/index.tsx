@@ -42,8 +42,8 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Stack direction="row" alignItems="flex-start">
-        <IconButton
+      <Stack direction="row" alignItems="flex-end">
+        {/* <IconButton
           aria-label="open drawer"
           onClick={handleDrawerToggle}
           edge="start"
@@ -56,11 +56,10 @@ const Header = ({ open, handleDrawerToggle }: Props) => {
           }}
         >
           {!open ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-        </IconButton>
+        </IconButton> */}
+        {headerContent}
         <UserAuth />
       </Stack>
-
-      {headerContent}
     </Box>
   );
 
