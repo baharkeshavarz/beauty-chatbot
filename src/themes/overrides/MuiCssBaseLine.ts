@@ -1,9 +1,13 @@
-// ==============================|| OVERRIDES - ALERT TITLE ||============================== //
-
 export default function MuiCssBaseLine() {
   return {
     MuiCssBaseline: {
       styleOverrides: `
+    @font-face {
+      font-family: 'sayeh';
+      src: url('/assets/fonts/sayeh/Mj.Sayeh.ttf') format('truetype');
+      font-weight: 100 900;
+      font-display: swap;
+    }
     @font-face {
       font-family: 'iransans';
       src: url('/assets/fonts/iransans/IRANSansWeb.woff') format('truetype');

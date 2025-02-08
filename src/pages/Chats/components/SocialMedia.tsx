@@ -35,13 +35,21 @@ const socialMediaItems = [
 ];
 
 const SocialMedia = () => {
-  const imgBoxSize = { xs: '90px', sm: '90px', md: '110px' };
+  const imgBoxSize = { xs: '80px', sm: '90px', md: '90px' };
 
   return (
     <Stack display="flex" justifyContent="center" alignItems="center" pt={5}>
-      <Grid container spacing={2} maxWidth="sm" mx="auto">
+      <Grid
+        container
+        spacing={1}
+        maxWidth="sm"
+        mx="auto"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         {socialMediaItems.map(social => (
-          <Grid item xs={4} sm={4} md={4} key={social.title}>
+          <Grid item xs={4} sm={4} md={2} key={social.title}>
             <Box
               display="flex"
               justifyContent="center"

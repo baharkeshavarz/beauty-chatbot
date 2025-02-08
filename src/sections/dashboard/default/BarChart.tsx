@@ -20,7 +20,7 @@ const BarChart: React.FC<BarChartProps> = ({ labels, dataset }) => {
   ]);
 
   const fontSetting = {
-    fontFamily: theme.direction === 'rtl' ? 'iransans' : undefined,
+    fontFamily: theme.direction === 'rtl' ? 'sayeh' : undefined,
     fontSize: '0.7rem',
     color: mode === 'dark' ? 'common.white' : 'common.black',
   };

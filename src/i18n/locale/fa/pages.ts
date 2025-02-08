@@ -17,8 +17,8 @@ const menu = {
 
 const chats = {
   help: 'چگونه می‌توانم کمکتون کنم؟',
-  messageToSystem: 'از Zhoost بپرس',
-  hiMessage: 'سلام! منZhoost هستم!  دستیار هوشمند زیبایی شما!',
+  messageToSystem: 'از ژوست بپرس',
+  hiMessage: 'سلام! ژوست هستم!  دستیار هوشمند زیبایی شما!',
   channelMessage: 'از طریق راه های ارتباطی زیر با ما در تماس باشید!',
 };
 
