@@ -15,22 +15,9 @@ const menu = {
   dashboard: 'داشبورد',
 };
 
-const dashboard = {
-  reports: 'گزارشات ',
-  requestsReport: 'گزارش درخواست ها',
-  ordersReport: 'گزارش سفارش ها',
-  info: {
-    requestCount: 'تعداد کل درخواست ها',
-    ordersCount: 'تعداد کل سفارش ها',
-    customersCount: 'تعداد کل مشتریان',
-    suppliersCount: 'تعداد کل تامین کنندگان',
-    recentOrders: 'سفارشات اخیر',
-    recentTransactions: 'تراکنش های اخیر',
-  },
-  types: {
-    report_daily: 'روزانه',
-    report_monthly: 'ماهانه',
-  },
+const chats = {
+  help: 'چگونه می‌توانم کمکتون کنم؟',
+  messageToSystem: 'از Zhoost بپرس',
 };
 
 const account = {
@@ -56,7 +43,7 @@ const pages = {
   login,
   home,
   menu,
-  dashboard,
+  chats,
   account,
 };
 

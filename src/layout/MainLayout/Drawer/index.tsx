@@ -33,7 +33,7 @@ const MainDrawer = ({ open, handleDrawerToggle, window }: Props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPrivileges());
+    //dispatch(fetchPrivileges()); //TODO
   }, []);
 
   return (

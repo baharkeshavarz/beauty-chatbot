@@ -15,22 +15,9 @@ const menu = {
   dashboard: 'Dashboard',
 };
 
-const dashboard = {
-  reports: 'Reports',
-  requestsReport: 'Requests Report',
-  ordersReport: 'Orders Report',
-  info: {
-    requestCount: 'Total Requests',
-    ordersCount: 'Total Orders',
-    customersCount: 'Total Customers',
-    suppliersCount: 'Total Suppliers',
-    recentOrders: 'Recent Orders',
-    recentTransactions: 'Recent Transactions',
-  },
-  types: {
-    report_daily: 'Daily',
-    report_monthly: 'Monthly',
-  },
+const chats = {
+  help: 'What can I help with?',
+  messageToSystem: 'Message Zhoost',
 };
 
 const account = {
@@ -56,7 +43,7 @@ const pages = {
   login,
   home,
   menu,
-  dashboard,
+  chats,
   account,
 };
 

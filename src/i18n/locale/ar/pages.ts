@@ -15,22 +15,9 @@ const menu = {
   dashboard: 'لوحة التحكم',
 };
 
-const dashboard = {
-  reports: 'التقارير',
-  requestsReport: 'تقرير الطلبات',
-  ordersReport: 'تقرير الطلبات الشرائية',
-  info: {
-    requestCount: 'إجمالي عدد الطلبات',
-    ordersCount: 'إجمالي عدد الطلبات الشرائية',
-    customersCount: 'إجمالي عدد العملاء',
-    suppliersCount: 'إجمالي عدد الموردين',
-    recentOrders: 'الطلبات الأخيرة',
-    recentTransactions: 'المعاملات الأخيرة',
-  },
-  types: {
-    report_daily: 'يومي',
-    report_monthly: 'شهري',
-  },
+const chats = {
+  help: 'ما الذي يمكنني المساعدة فيه؟',
+  messageToSystem: 'اسأل Zhoost',
 };
 
 const account = {
@@ -56,7 +43,7 @@ const pages = {
   login,
   home,
   menu,
-  dashboard,
+  chats,
   account,
 };
 
