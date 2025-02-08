@@ -22,8 +22,15 @@ const MainLayout = () => {
 
   const menuItems = useServerMenu();
   return (
-    <Box sx={{ display: 'flex', width: '100%' }}>
-      <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
+    <Box
+      sx={{
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+      }}
+    >
+      {/* <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} /> */}
       <Drawer open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <Box component="main" sx={{ width: 'calc(100% - 260px)', flexGrow: 1 }}>
         {/* {container && (
@@ -43,14 +50,10 @@ const MainLayout = () => {
         {!container && (
           <Box
             sx={{
+              position: 'relative',
+              minHeight: 'calc(100vh - 110px)',
               display: 'flex',
               flexDirection: 'column',
-              backgroundImage: `url(${DEFAULT_BACKGROUND_IMAGE})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center center',
-              opacity: 0.7,
-              backgroundSize: 'cover',
-              height: '100vh',
             }}
           >
             <Outlet />
