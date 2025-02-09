@@ -31,7 +31,20 @@ export default function MuiCssBaseLine() {
         src: url('/assets/fonts/manrope/Manrope-VariableFont_wght.ttf') format('truetype');
         font-weight: 100 900;
         font-display: swap;
-    }`,
+    }
+     @font-face {
+        font-family: 'apple';
+        src: url('/assets/fonts/apple/AppleGaramond-Light.ttf') format('truetype');
+        font-weight: 100 900;
+        font-display: swap;
+    }
+     @font-face {
+        font-family: 'hindimysuru';
+        src: url('/assets/fonts/hindimysuru/HindMysuru-Regular.ttf') format('truetype');
+        font-weight: 100 900;
+        font-display: swap;
+    }
+    `,
     },
   };
 }

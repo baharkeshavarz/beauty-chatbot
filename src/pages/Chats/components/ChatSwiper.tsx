@@ -27,7 +27,6 @@ const SwiperStyled = styled(Swiper)(({ theme }) => ({
     },
     '& .swiper-pagination-bullet-active': {
       background: theme.palette.primary.dark,
-      cursor: 'pointer',
     },
   },
 }));
@@ -52,16 +51,16 @@ const ChatSwiper = () => {
       modules={[Autoplay, Pagination]}
       autoplay={{
         delay: DEFAULT_SLIDER_INTERVAL,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }}
     >
       {bgImages.map((bgImage, index) => (
         <SwiperSlide
           key={index}
-          style={{
-            height: 'auto',
-            boxSizing: 'border-box',
-          }}
+          // style={{
+          //   height: 'auto',
+          //   boxSizing: 'border-box',
+          // }}
         >
           <img
             src={bgImage}

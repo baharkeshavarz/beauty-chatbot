@@ -33,7 +33,7 @@ export const languageMapper: Record<
 > = {
   'en-US': {
     direction: 'ltr',
-    fontFamily: 'manrope, noto-Arabic',
+    fontFamily: 'hindimysuru, noto-Arabic',
   },
   'ar-OM': {
     direction: 'rtl',
@@ -41,7 +41,7 @@ export const languageMapper: Record<
   },
   'fa-IR': {
     direction: 'rtl',
-    fontFamily: 'sayeh, manrope',
+    fontFamily: 'iransans, manrope',
   },
 };
 
