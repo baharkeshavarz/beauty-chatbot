@@ -5,8 +5,8 @@ import { MenuProps } from 'src/types/menu';
 // initial state
 const initialState: Omit<MenuProps, 'openItem'> = {
   openComponent: 'buttons',
-  drawerOpen: true,
-  componentDrawerOpen: true,
+  drawerOpen: false,
+  componentDrawerOpen: false,
 };
 
 const menu = createSlice({

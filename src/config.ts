@@ -38,9 +38,9 @@ const config: DefaultConfigProps = {
   defaultPath: '/',
   fontFamily: `'Public Sans', sans-serif`,
   i18n: 'en',
-  miniDrawer: true,
+  miniDrawer: false,
   container: false,
-  mode: 'light',
+  mode: 'dark',
   presetColor: 'default',
   themeDirection: 'ltr',
 };
