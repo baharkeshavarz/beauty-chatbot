@@ -1,12 +1,16 @@
-import Wrapper from 'src/components/Wrapper/Wrapper';
+import { Box, useTheme } from '@mui/material';
+import ChatSwiper from './components/ChatSwiper';
 import SocialMedia from './components/SocialMedia';
 import ChatHeader from './components/ChatHeader';
-import ChatSwiper from './components/ChatSwiper';
-import { Box } from '@mui/material';
 
 const Chats = () => {
+  const theme = useTheme();
   return (
-    <Box>
+    <Box position="relative">
+      <Box position="absolute" width="100%" zIndex={theme.zIndex.fab}>
+        <ChatHeader />
+        <SocialMedia />
+      </Box>
       <ChatSwiper />
     </Box>
   );

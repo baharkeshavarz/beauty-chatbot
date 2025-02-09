@@ -1,11 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { useRef } from 'react';
+import { BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4 } from 'src/configs/config';
+
+const bgImages = [BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4];
 
 const ChatSwiper = () => {
   const theme = useTheme();
@@ -13,9 +16,8 @@ const ChatSwiper = () => {
   return (
     <Box
       mx="auto"
-      bgcolor="green"
       width="100%"
-      height="100%"
+      height="100vh"
       display={'flex'}
       justifyContent={'center'}
       alignItems={'center'}
@@ -27,29 +29,23 @@ const ChatSwiper = () => {
         pagination={{
           clickable: true,
         }}
-        // breakpoints={{
-        //   [theme.breakpoints.values.md]: {
-        //     slidesPerView: 4,
-        //   },
-        // }}
         style={{
-          height: 400,
-          width: 400,
+          width: '100%',
+          height: '100vh',
         }}
         spaceBetween={theme.spacing(2)}
         modules={[Pagination]}
+        autoplay={true}
       >
-        <SwiperSlide>
-          <Typography color="red">Slide 1</Typography>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {bgImages.map((bgImage, index) => (
+          <SwiperSlide>
+            <img
+              src={bgImage}
+              alt="slide"
+              style={{ width: '100%', height: '100%', objectFit: 'fill' }}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

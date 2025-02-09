@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 
 import Drawer from './Drawer';
 import Header from './Header';
@@ -8,7 +8,6 @@ import Header from './Header';
 import { useSelector } from 'src/store';
 import { openDrawer } from 'src/store/reducers/menu';
 import useServerMenu from './Drawer/hooks/useMenuItem';
-import { DEFAULT_BACKGROUND_IMAGE } from 'src/configs/config';
 
 const MainLayout = () => {
   const dispatch = useDispatch();
@@ -20,19 +19,19 @@ const MainLayout = () => {
     dispatch(openDrawer({ drawerOpen: !drawerOpen }));
   };
 
-  const menuItems = useServerMenu();
   return (
     <Box
       sx={{
         display: 'flex',
         width: '100%',
-        height: '100%',
+        height: '100vh',
         overflow: 'hidden',
+        backgroundColor: 'transparent',
       }}
     >
-      {/* <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} /> */}
+      <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <Drawer open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
-      <Box component="main" sx={{ width: 'calc(100% - 260px)', flexGrow: 1 }}>
+      <Box component="main" sx={{ width: '100%', flexGrow: 1 }}>
         {/* {container && (
           <Container
             maxWidth="xl"
@@ -51,8 +50,6 @@ const MainLayout = () => {
           <Box
             sx={{
               position: 'relative',
-              minHeight: 'calc(100vh - 110px)',
-              display: 'flex',
               flexDirection: 'column',
             }}
           >

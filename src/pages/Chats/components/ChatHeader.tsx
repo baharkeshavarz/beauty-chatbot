@@ -12,7 +12,12 @@ const ChatHeader = () => {
 
   return (
     <>
-      <Stack display="flex" justifyContent="center" alignItems="center" pt={15}>
+      <Stack
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        pt={isMobile ? 10 : 14}
+      >
         <Logo
           logoSx={{ width: 220, height: 100 }}
           logoSource={DEFAULT_LOGO_LIGHT}
