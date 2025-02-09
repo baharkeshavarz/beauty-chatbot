@@ -20,4 +20,4 @@ export const BG_IMAGE2 = '/assets/images/slider/bg2.png';
 export const BG_IMAGE3 = '/assets/images/slider/bg3.png';
 export const BG_IMAGE4 = '/assets/images/slider/bg4.png';
 
-export const DEFAULT_SLIDER_INTERVAL = 2500;
+export const DEFAULT_SLIDER_INTERVAL = 3500;

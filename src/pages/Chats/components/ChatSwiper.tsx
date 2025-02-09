@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Box, useTheme } from '@mui/material';
+import { Box, styled, useTheme } from '@mui/material';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import { Autoplay, Pagination } from 'swiper/modules';
 import { useRef } from 'react';
 import {
@@ -15,9 +16,25 @@ import {
 
 const bgImages = [BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4];
 
+const SwiperStyled = styled(Swiper)(({ theme }) => ({
+  '& .swiper-pagination': {
+    '& .swiper-pagination-bullet': {
+      width: '1.3rem',
+      height: '1.3rem',
+      cursor: 'pointer',
+      background: theme.palette.primary.main,
+    },
+    '& .swiper-pagination-bullet-active': {
+      background: theme.palette.primary.dark,
+      cursor: 'pointer',
+    },
+  },
+}));
+
 const ChatSwiper = () => {
   const theme = useTheme();
   const sliderRef = useRef<any>(null);
+
   return (
     <Box
       mx="auto"
@@ -27,7 +44,7 @@ const ChatSwiper = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Swiper
+      <SwiperStyled
         ref={sliderRef}
         dir={theme.direction}
         direction="vertical"
@@ -54,7 +71,7 @@ const ChatSwiper = () => {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </SwiperStyled>
     </Box>
   );
 };
