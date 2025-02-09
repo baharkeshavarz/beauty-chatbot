@@ -24,6 +24,7 @@ const MainLayout = () => {
         display: 'flex',
         width: '100%',
         backgroundColor: 'transparent',
+        overflow: 'hidden',
       }}
     >
       <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
