@@ -2,11 +2,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box, useTheme } from '@mui/material';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { useRef } from 'react';
-import { BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4 } from 'src/configs/config';
+import {
+  BG_IMAGE1,
+  BG_IMAGE2,
+  BG_IMAGE3,
+  BG_IMAGE4,
+  DEFAULT_SLIDER_INTERVAL,
+} from 'src/configs/config';
 
 const bgImages = [BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4];
 
@@ -18,14 +23,14 @@ const ChatSwiper = () => {
       mx="auto"
       width="100%"
       height="100vh"
-      display={'flex'}
-      justifyContent={'center'}
-      alignItems={'center'}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
       <Swiper
         ref={sliderRef}
         dir={theme.direction}
-        direction={'vertical'}
+        direction="vertical"
         pagination={{
           clickable: true,
         }}
@@ -34,8 +39,11 @@ const ChatSwiper = () => {
           height: '100vh',
         }}
         spaceBetween={theme.spacing(2)}
-        modules={[Pagination]}
-        autoplay={true}
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: DEFAULT_SLIDER_INTERVAL,
+          disableOnInteraction: false,
+        }}
       >
         {bgImages.map((bgImage, index) => (
           <SwiperSlide>
