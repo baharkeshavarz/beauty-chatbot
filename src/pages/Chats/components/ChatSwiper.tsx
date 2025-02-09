@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Box, styled, useTheme } from '@mui/material';
+import { styled, useTheme } from '@mui/material';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,6 +18,7 @@ const bgImages = [BG_IMAGE1, BG_IMAGE2, BG_IMAGE3, BG_IMAGE4];
 
 const SwiperStyled = styled(Swiper)(({ theme }) => ({
   '& .swiper-pagination': {
+    padding: theme.spacing(2),
     '& .swiper-pagination-bullet': {
       width: '1.3rem',
       height: '1.3rem',
@@ -36,43 +37,40 @@ const ChatSwiper = () => {
   const sliderRef = useRef<any>(null);
 
   return (
-    <Box
-      mx="auto"
-      width="100%"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
+    <SwiperStyled
+      ref={sliderRef}
+      dir={theme.direction}
+      direction="vertical"
+      pagination={{
+        clickable: true,
+      }}
+      style={{
+        width: '100%',
+        height: '100vh',
+      }}
+      spaceBetween={theme.spacing(2)}
+      modules={[Autoplay, Pagination]}
+      autoplay={{
+        delay: DEFAULT_SLIDER_INTERVAL,
+        disableOnInteraction: false,
+      }}
     >
-      <SwiperStyled
-        ref={sliderRef}
-        dir={theme.direction}
-        direction="vertical"
-        pagination={{
-          clickable: true,
-        }}
-        style={{
-          width: '100%',
-          height: '100vh',
-        }}
-        spaceBetween={theme.spacing(2)}
-        modules={[Autoplay, Pagination]}
-        autoplay={{
-          delay: DEFAULT_SLIDER_INTERVAL,
-          disableOnInteraction: false,
-        }}
-      >
-        {bgImages.map((bgImage, index) => (
-          <SwiperSlide>
-            <img
-              src={bgImage}
-              alt="slide"
-              style={{ width: '100%', height: '100%', objectFit: 'fill' }}
-            />
-          </SwiperSlide>
-        ))}
-      </SwiperStyled>
-    </Box>
+      {bgImages.map((bgImage, index) => (
+        <SwiperSlide
+          key={index}
+          style={{
+            height: 'auto',
+            boxSizing: 'border-box',
+          }}
+        >
+          <img
+            src={bgImage}
+            alt=""
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </SwiperSlide>
+      ))}
+    </SwiperStyled>
   );
 };
 

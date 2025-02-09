@@ -7,7 +7,6 @@ import Header from './Header';
 
 import { useSelector } from 'src/store';
 import { openDrawer } from 'src/store/reducers/menu';
-import useServerMenu from './Drawer/hooks/useMenuItem';
 
 const MainLayout = () => {
   const dispatch = useDispatch();
@@ -24,14 +23,12 @@ const MainLayout = () => {
       sx={{
         display: 'flex',
         width: '100%',
-        height: '100vh',
-        overflow: 'hidden',
         backgroundColor: 'transparent',
       }}
     >
       <Header open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <Drawer open={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
-      <Box component="main" sx={{ width: '100%', flexGrow: 1 }}>
+      <Box sx={{ width: '100%' }}>
         {/* {container && (
           <Container
             maxWidth="xl"
@@ -47,14 +44,9 @@ const MainLayout = () => {
         )} */}
 
         {!container && (
-          <Box
-            sx={{
-              position: 'relative',
-              flexDirection: 'column',
-            }}
-          >
+          <>
             <Outlet />
-          </Box>
+          </>
         )}
       </Box>
     </Box>
