@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, styled, Link } from '@mui/material';
+import { Box, Grid, Stack, styled, Link, Typography } from '@mui/material';
 import {
   SOCIAL_INSTAGRAM_IMAGE,
   SOCIAL_INSTAGRAM_LINK,
@@ -7,6 +7,8 @@ import {
   SOCIAL_WHATSAPP_IMAGE,
   SOCIAL_WHATSAPP_LINK,
 } from 'src/configs/config';
+import { useTranslation } from 'react-i18next';
+import { useAppContext } from 'src/hooks/useAppContext';
 
 const ImageWrapper = styled(Box)({
   cursor: 'pointer',
@@ -35,6 +37,9 @@ const socialMediaItems = [
 ];
 
 const SocialMedia = () => {
+  const { isMobile } = useAppContext();
+  const fontVariant = isMobile ? 'body2' : 'body2';
+  const { t } = useTranslation();
   const imgBoxSize = { xs: '50px', sm: '60px', md: '70px' };
 
   return (
@@ -56,10 +61,12 @@ const SocialMedia = () => {
               justifyContent="center"
               alignItems="center"
               borderRadius={4}
-              bgcolor="common.white"
-              boxShadow={2}
+              boxShadow={1}
               height={imgBoxSize}
               width={imgBoxSize}
+              sx={{
+                background: 'rgba(255, 255, 255, 0.5)',
+              }}
             >
               <ImageWrapper>
                 <Link
@@ -81,6 +88,15 @@ const SocialMedia = () => {
           </Grid>
         ))}
       </Grid>
+      <Typography
+        variant={fontVariant}
+        textAlign="center"
+        lineHeight={2}
+        color="grey[100]"
+        py={2}
+      >
+        {t('pages:chats.textHere')}
+      </Typography>
     </Stack>
   );
 };

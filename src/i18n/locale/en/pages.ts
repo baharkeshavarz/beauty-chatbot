@@ -21,6 +21,7 @@ const chats = {
   hiMessage:
     'Hey there! I’m Zhoost, your smart assistant for beauty businesses!',
   channelMessage: 'Stay in touch through the channels below!',
+  textHere: 'Text Here!',
 };
 
 const account = {

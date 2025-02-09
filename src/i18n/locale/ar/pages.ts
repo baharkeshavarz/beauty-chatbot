@@ -20,6 +20,7 @@ const chats = {
   messageToSystem: 'اسأل ژوست',
   hiMessage: 'مرحبًا يا من هناك! أنا ژوست مساعدك الذكي في مجال التجميل!',
   channelMessage: 'ابقَ على تواصل عبر القنوات أدناه!',
+  textHere: 'النص هنا!',
 };
 
 const account = {

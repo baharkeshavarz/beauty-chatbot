@@ -20,6 +20,7 @@ const chats = {
   messageToSystem: 'از ژوست بپرس',
   hiMessage: 'سلام! ژوست هستم!  دستیار هوشمند زیبایی شما!',
   channelMessage: 'از طریق راه های ارتباطی زیر با ما در تماس باشید!',
+  textHere: 'اینجا به من پیام بده!',
 };
 
 const account = {

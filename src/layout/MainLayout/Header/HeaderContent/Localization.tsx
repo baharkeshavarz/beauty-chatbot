@@ -16,6 +16,7 @@ import IconButton from 'src/components/@extended/IconButton';
 import Transitions from 'src/components/@extended/Transitions';
 
 import { TranslationOutlined } from '@ant-design/icons';
+import LanguageIcon from '@mui/icons-material/Language';
 import { LanguagesType, languages } from 'src/configs/languages';
 import { languageMapper } from 'src/themes';
 import { useDispatch, useSelector } from 'src/store';
@@ -65,7 +66,7 @@ const Localization = () => {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <TranslationOutlined />
+        <LanguageIcon />
       </IconButton>
       <Popper
         placement={matchesXs ? 'bottom-start' : 'bottom'}
