@@ -11,6 +11,9 @@ import { useTranslation } from 'react-i18next';
 import { useAppContext } from 'src/hooks/useAppContext';
 
 const ImageWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   cursor: 'pointer',
   transition: 'transform 0.7s ease-in-out',
   '&:hover': {
@@ -68,12 +71,12 @@ const SocialMedia = () => {
                 background: 'rgba(255, 255, 255, 0.5)',
               }}
             >
-              <ImageWrapper>
-                <Link
-                  href={social.linkTo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <Link
+                href={social.linkTo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ImageWrapper>
                   <img
                     src={social.logo}
                     alt={social.title}
@@ -82,8 +85,8 @@ const SocialMedia = () => {
                       maxHeight: '100%',
                     }}
                   />
-                </Link>
-              </ImageWrapper>
+                </ImageWrapper>
+              </Link>
             </Box>
           </Grid>
         ))}
@@ -94,6 +97,7 @@ const SocialMedia = () => {
         lineHeight={2}
         color="grey[100]"
         py={2}
+        letterSpacing={5}
       >
         {t('pages:chats.textHere')}
       </Typography>

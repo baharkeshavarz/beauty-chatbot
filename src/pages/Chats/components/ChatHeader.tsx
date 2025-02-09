@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const ChatHeader = () => {
   const { t } = useTranslation();
   const { isMobile } = useAppContext();
-  const fontVariant = isMobile ? 'h6' : 'h3';
+  const fontVariant = isMobile ? 'h5' : 'h3';
   const logoWidthSize = isMobile ? 200 : 270;
   const logoHeightSize = isMobile ? 110 : 120;
   return (

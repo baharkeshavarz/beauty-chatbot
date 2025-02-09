@@ -13,7 +13,6 @@ import {
   BG_IMAGE4,
   BG_IMAGE5,
   BG_IMAGE6,
-  BG_IMAGE7,
   DEFAULT_SLIDER_INTERVAL,
 } from 'src/configs/config';
 
@@ -24,7 +23,6 @@ const bgImages = [
   BG_IMAGE4,
   BG_IMAGE5,
   BG_IMAGE6,
-  BG_IMAGE7,
 ];
 
 const SwiperStyled = styled(Swiper)(({ theme }) => ({
